@@ -10,6 +10,37 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Selector_tool.x += -16
 })
+scene.onOverlapTile(SpriteKind.Selecter, assets.tile`myTile`, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        if (Mode == 1) {
+            Nothing_Equipped = false
+            Seeds_Equipped = true
+            Harvester_Equipped = false
+            tiles.setTileAt(tiles.locationOfSprite(Selector_tool), assets.tile`myTile0`)
+        }
+        if (Mode == 2) {
+            Nothing_Equipped = false
+            Seeds_Equipped = false
+            Harvester_Equipped = true
+        }
+        if (Mode == 3) {
+            Nothing_Equipped = true
+            Seeds_Equipped = false
+            Harvester_Equipped = false
+        }
+    }
+})
+info.onCountdownEnd(function () {
+    timer.background(function () {
+        color.startFade(color.originalPalette, color.Black, 2000)
+        color.pauseUntilFadeDone()
+        tiles.replaceAllTiles(assets.tile`myTile1`, assets.tile`myTile2`)
+        tiles.replaceAllTiles(assets.tile`myTile0`, assets.tile`myTile1`)
+        color.startFade(color.Black, color.originalPalette, 2000)
+        color.pauseUntilFadeDone()
+        info.startCountdown(10)
+    })
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     Selector_tool.x += 16
 })
@@ -97,6 +128,9 @@ function ChangeMode () {
         )
     }
 }
+let Harvester_Equipped = false
+let Seeds_Equipped = false
+let Nothing_Equipped = false
 let Mode = 0
 let Selector_tool: Sprite = null
 Selector_tool = sprites.create(img`
@@ -241,3 +275,5 @@ scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     `)
 tiles.placeOnRandomTile(Selector_tool, assets.tile`myTile`)
+info.startCountdown(10)
+Mode = 3

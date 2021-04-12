@@ -10,6 +10,24 @@
         "tilemapTile": true,
         "displayName": "myTile"
     },
+    "tile2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAADu7u7u7u4A4N3d3d3d3Q7g7e3d7d3eDuBn3d7d3t4O4O3d3n1m3g7g7d3e3d7eDuDtfWbd3t4O4N3e7e3d3g7g3d7t7e3dDuB91t7t7d0O4N3e3n3W3g7g7d3e3d7eDuDd3d3d3d0OAO7u7u7u7gAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile0"
+    },
+    "tile3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAADu7u7u7u4A4N3d3d3d3Q7g7e3d7d3eDnBm3d7d3t4O4O3d3n1m3g7g7d3e3d7eDuDtfWbd3t4O4N3e7e3d3g7g3d7t7e3dDuBn1t7t7d0O4N3e3mfW3g7g7d3e3d7eDuDd3d3d3d0OAO7u7u7u7gAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile1"
+    },
+    "tile4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAADu7u7u7u4A4N3d3d3d3Q7g7e3d7d3eDkVE3d7d3t4O4O3dXkRE3g7g7d3e3d7eDuBdRETd3t4O4N3e7e3d3g7g3d7t7e3dDlBE1N7t7d0O4N3eRUTU3g7g7d3e3d7eDuDd3d3d3d0OAO7u7u7u7gAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile2"
+    },
     "level1": {
         "id": "level1",
         "mimeType": "application/mkcd-tilemap",
@@ -25,7 +43,8 @@
         "data": "MTAwYTAwMDgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDEwMTAxMDEwMTAxMDAwMDAwMDAwMTAxMDEwMTAxMDEwMDAwMDAwMDAxMDEwMTAxMDEwMTAwMDAwMDAwMDEwMTAxMDEwMTAxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==",
         "tileset": [
             "myTiles.transparency16",
-            "myTiles.tile1"
+            "myTiles.tile1",
+            "myTiles.tile4"
         ],
         "displayName": "level2"
     },
